@@ -10,6 +10,7 @@
 		CE5CCBD32FF1C490004BF000 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBD12FF1C490004BF000 /* ContentView.swift */; };
 		CE5CCBDB2FF1D254004BF000 /* RuViewFlasherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBDA2FF1D254004BF000 /* RuViewFlasherApp.swift */; };
 		CE5CCBDD2FF1D5BD004BF000 /* SerialPortManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBDC2FF1D3C9004BF000 /* SerialPortManager.swift */; };
+		CE5CCBE22FF1D9F4004BF000 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBE12FF1D9ED004BF000 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,10 @@
 		CE5CCBD12FF1C490004BF000 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE5CCBDA2FF1D254004BF000 /* RuViewFlasherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuViewFlasherApp.swift; sourceTree = "<group>"; };
 		CE5CCBDC2FF1D3C9004BF000 /* SerialPortManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialPortManager.swift; sourceTree = "<group>"; };
+		CE5CCBE12FF1D9ED004BF000 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CE5CCBE42FF1DB10004BF000 /* ProvisionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisionSettings.swift; sourceTree = "<group>"; };
+		CE5CCBE52FF1DB51004BF000 /* Firmware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firmware.swift; sourceTree = "<group>"; };
+		CE5CCBE62FF1DB7E004BF000 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -43,8 +48,12 @@
 			children = (
 				CE5CCBD62FF1C520004BF000 /* App */,
 				CE5CCBD72FF1C541004BF000 /* Views */,
-				CE5CCBD82FF1C554004BF000 /* Managers */,
+				CE5CCBDE2FF1D81B004BF000 /* ViewModels */,
+				CE5CCBDF2FF1D83E004BF000 /* Services */,
 				CE5CCBD92FF1C573004BF000 /* Models */,
+				CE5CCBD82FF1C554004BF000 /* Managers */,
+				CE5CCBE32FF1DA78004BF000 /* Utilities */,
+				CE5CCBE02FF1D8F8004BF000 /* Resources */,
 				CE5CCBC42FF1BBFD004BF000 /* RuViewFlasher */,
 				CE5CCBC32FF1BBFD004BF000 /* Products */,
 			);
@@ -69,6 +78,7 @@
 		CE5CCBD72FF1C541004BF000 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE5CCBE12FF1D9ED004BF000 /* MainViewModel.swift */,
 				CE5CCBD12FF1C490004BF000 /* ContentView.swift */,
 			);
 			path = Views;
@@ -85,8 +95,39 @@
 		CE5CCBD92FF1C573004BF000 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE5CCBE62FF1DB7E004BF000 /* Device.swift */,
+				CE5CCBE52FF1DB51004BF000 /* Firmware.swift */,
+				CE5CCBE42FF1DB10004BF000 /* ProvisionSettings.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE5CCBDE2FF1D81B004BF000 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE5CCBDF2FF1D83E004BF000 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE5CCBE02FF1D8F8004BF000 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE5CCBE32FF1DA78004BF000 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +207,7 @@
 				CE5CCBDD2FF1D5BD004BF000 /* SerialPortManager.swift in Sources */,
 				CE5CCBD32FF1C490004BF000 /* ContentView.swift in Sources */,
 				CE5CCBDB2FF1D254004BF000 /* RuViewFlasherApp.swift in Sources */,
+				CE5CCBE22FF1D9F4004BF000 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
