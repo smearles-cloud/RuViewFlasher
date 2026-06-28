@@ -11,6 +11,9 @@
 		CE5CCBDB2FF1D254004BF000 /* RuViewFlasherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBDA2FF1D254004BF000 /* RuViewFlasherApp.swift */; };
 		CE5CCBDD2FF1D5BD004BF000 /* SerialPortManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBDC2FF1D3C9004BF000 /* SerialPortManager.swift */; };
 		CE5CCBE22FF1D9F4004BF000 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBE12FF1D9ED004BF000 /* MainViewModel.swift */; };
+		CE5CCBE82FF1DC58004BF000 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBE62FF1DB7E004BF000 /* Device.swift */; };
+		CE5CCBE92FF1DC64004BF000 /* Firmware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBE52FF1DB51004BF000 /* Firmware.swift */; };
+		CE5CCBEA2FF1DC69004BF000 /* ProvisionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBE42FF1DB10004BF000 /* ProvisionSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,7 @@
 		CE5CCBE42FF1DB10004BF000 /* ProvisionSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvisionSettings.swift; sourceTree = "<group>"; };
 		CE5CCBE52FF1DB51004BF000 /* Firmware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firmware.swift; sourceTree = "<group>"; };
 		CE5CCBE62FF1DB7E004BF000 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		CE5CCBE72FF1DBD0004BF000 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -105,6 +109,7 @@
 		CE5CCBDE2FF1D81B004BF000 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE5CCBE72FF1DBD0004BF000 /* MainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -204,10 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5CCBE92FF1DC64004BF000 /* Firmware.swift in Sources */,
 				CE5CCBDD2FF1D5BD004BF000 /* SerialPortManager.swift in Sources */,
+				CE5CCBEA2FF1DC69004BF000 /* ProvisionSettings.swift in Sources */,
 				CE5CCBD32FF1C490004BF000 /* ContentView.swift in Sources */,
 				CE5CCBDB2FF1D254004BF000 /* RuViewFlasherApp.swift in Sources */,
 				CE5CCBE22FF1D9F4004BF000 /* MainViewModel.swift in Sources */,
+				CE5CCBE82FF1DC58004BF000 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

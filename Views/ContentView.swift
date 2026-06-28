@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @StateObject private var serialManager = SerialPortManager()
+    @StateObject private var vm = MainViewModel()
 
     var body: some View {
+
         VStack(spacing: 20) {
 
             Text("RuView Flasher")
@@ -20,47 +21,52 @@ struct ContentView: View {
 
             Divider()
 
-            GroupBox("ESP32 Device") {
-                VStack(alignment: .leading) {
-                    if let port = serialManager.selectedPort {
-                        Text("Connected:")
-                        Text(port)
-                            .font(.system(.body, design: .monospaced))
-                    } else {
-                        Text("No ESP32 detected")
-                            .foregroundColor(.secondary)
-                    }
+            GroupBox("Device") {
 
-                    Button("Refresh") {
-                        serialManager.scan()
-                    }
+                if let device = vm.connectedDevice {
+                    Text(device.displayName)
+                } else {
+                    Text("No ESP32 Connected")
+                        .foregroundStyle(.secondary)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
+
             }
 
             GroupBox("Firmware") {
-                Button("Select Firmware (.bin)") {
-                    // Added next
+
+                if let firmware = vm.selectedFirmware {
+                    Text(firmware.filename)
+                } else {
+                    Text("No firmware selected")
+                        .foregroundStyle(.secondary)
                 }
+
+                Button("Choose Firmware") {
+                    // We'll implement this next.
+                }
+
             }
 
-            GroupBox("Wi-Fi Provisioning") {
-                VStack {
-                    TextField("SSID", text: .constant(""))
-                    SecureField("Password", text: .constant(""))
-                }
+            GroupBox("Wi-Fi") {
+
+                TextField("SSID", text: $vm.settings.ssid)
+
+                SecureField("Password",
+                            text: $vm.settings.password)
+
             }
+
+            ProgressView(value: vm.progress)
+
+            Text(vm.status)
 
             Button("Flash & Provision") {
-                // Added next
+                vm.beginFlash()
             }
-            .buttonStyle(.borderedProminent)
+            .disabled(!vm.canFlash)
 
         }
-        .padding(30)
-        .frame(width: 500)
-        .onAppear {
-            serialManager.scan()
-        }
+        .padding()
+        .frame(width: 520)
     }
 }
