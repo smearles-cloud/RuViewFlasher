@@ -13,5 +13,6 @@ struct RuViewFlasherApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(.automatic)
     }
 }

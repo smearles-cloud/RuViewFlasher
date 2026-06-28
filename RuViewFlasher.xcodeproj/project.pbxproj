@@ -6,8 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CE5CCBD32FF1C490004BF000 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBD12FF1C490004BF000 /* ContentView.swift */; };
+		CE5CCBDB2FF1D254004BF000 /* RuViewFlasherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBDA2FF1D254004BF000 /* RuViewFlasherApp.swift */; };
+		CE5CCBDD2FF1D5BD004BF000 /* SerialPortManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CCBDC2FF1D3C9004BF000 /* SerialPortManager.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		CE5CCBC22FF1BBFD004BF000 /* RuViewFlasher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuViewFlasher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5CCBD12FF1C490004BF000 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE5CCBDA2FF1D254004BF000 /* RuViewFlasherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuViewFlasherApp.swift; sourceTree = "<group>"; };
+		CE5CCBDC2FF1D3C9004BF000 /* SerialPortManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialPortManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +41,10 @@
 		CE5CCBB92FF1BBFD004BF000 = {
 			isa = PBXGroup;
 			children = (
+				CE5CCBD62FF1C520004BF000 /* App */,
+				CE5CCBD72FF1C541004BF000 /* Views */,
+				CE5CCBD82FF1C554004BF000 /* Managers */,
+				CE5CCBD92FF1C573004BF000 /* Models */,
 				CE5CCBC42FF1BBFD004BF000 /* RuViewFlasher */,
 				CE5CCBC32FF1BBFD004BF000 /* Products */,
 			);
@@ -43,6 +56,37 @@
 				CE5CCBC22FF1BBFD004BF000 /* RuViewFlasher.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CE5CCBD62FF1C520004BF000 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE5CCBDA2FF1D254004BF000 /* RuViewFlasherApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CE5CCBD72FF1C541004BF000 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE5CCBD12FF1C490004BF000 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE5CCBD82FF1C554004BF000 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CE5CCBDC2FF1D3C9004BF000 /* SerialPortManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CE5CCBD92FF1C573004BF000 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5CCBDD2FF1D5BD004BF000 /* SerialPortManager.swift in Sources */,
+				CE5CCBD32FF1C490004BF000 /* ContentView.swift in Sources */,
+				CE5CCBDB2FF1D254004BF000 /* RuViewFlasherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
